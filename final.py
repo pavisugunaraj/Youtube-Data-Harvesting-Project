@@ -66,7 +66,7 @@ def get_video_info(video_ids):
                 vid_description=items['snippet']['description'],
                 likes=items['statistics'].get('likeCount'),
                 views=items['statistics']['viewCount'],
-                comment_count=items['statistics']['commentCount'],
+                comment_count=items['statistics'].get('commentCount'),
                 vid_duration=convert_dur(items['contentDetails']['duration']),
                 vid_publishedAt=items['snippet']['publishedAt']
                 )
